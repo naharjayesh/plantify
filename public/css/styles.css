@@ -19,17 +19,35 @@ a {
     width: 90%;
     margin: 2rem auto 5rem auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .nav-item {
-    margin-right: 5rem;
-    font-size: 1.6rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
 }
 
 .nav-item:last-child {
     margin-right: 0;
+}
+
+.icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-item {
+        margin-right: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
 }
 
 /*Content section*/
@@ -50,7 +68,6 @@ a {
 
 .grid-introduction {
     font-size: 1.6rem;
-    /* grid-row: span 2;*/
     text-align: justify;
 }
 
@@ -66,23 +83,38 @@ a {
     font-weight: bold;
 }
 
+@media screen and (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: auto;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .grid-introduction {
+        text-align: center;
+    }
+}
+
 /*Img - Grid*/
 
 .img-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(10rem, 2fr));
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 100%;
     margin-bottom: 5rem;
 }
 
 .img-container {
     background: white;
     border-radius: 2rem;
-    box-shadow: 7px 15px 29px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 29px rgba(0, 0, 0, 0.25);
     display: grid;
     grid-template-columns: auto auto;
     height: 25rem;
-    margin-top: 5rem;
+    margin: 5rem 2.5rem 0 2.5rem;
     width: 25rem;
 }
 
@@ -90,7 +122,6 @@ a {
     height: 23rem;
     align-self: center;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .img-container > img {
@@ -101,10 +132,27 @@ a {
 .img-text {
     font-size: 1.6rem;
     margin-top: 1rem;
+    text-overflow: ellipsis;
 }
 
 .img-text-bold {
     font-weight: bold;
     margin-bottom: 0;
     margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {
+        height: 30rem;
+        margin: 5rem 2.5rem 0 2.5rem;
+        width: 40rem;
+    }
+
+    .block {
+        height: 28rem;
+    }
+
+    .img-container > img {
+        height: 28rem;
+    }
 }
