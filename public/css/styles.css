@@ -119,20 +119,23 @@ a {
 }
 
 .block {
-    height: 23rem;
+    max-height: 23rem;
     align-self: center;
     overflow: hidden;
+    text-overflow: ellipsis ellipsis;
 }
 
 .img-container > img {
     height: 23rem;
     align-self: center;
+    margin-left: 0.5rem;
 }
 
 .img-text {
     font-size: 1.6rem;
     margin-top: 1rem;
     text-overflow: ellipsis;
+    margin-right: 0.5rem;
 }
 
 .img-text-bold {
@@ -145,14 +148,14 @@ a {
     .img-container {
         height: 30rem;
         margin: 5rem 2.5rem 0 2.5rem;
-        width: 40rem;
+        width: 100%;
     }
 
     .block {
-        height: 28rem;
+        max-height: 20rem;
     }
 
     .img-container > img {
-        height: 28rem;
+        height: 20rem;
     }
 }
